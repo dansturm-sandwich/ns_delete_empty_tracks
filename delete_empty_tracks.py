@@ -36,15 +36,15 @@ def delete_empty_tracks():
         f"Deleted {removed_count} empty track(s)."
     )
 
-def add_delete_empty_tracks_action():
-    menu_action = hiero.ui.findMenuAction("Sandwich Dailies")
-    if not menu_action:
-        print("Sandwich Dailies menu not found.")
-        return
+# def add_delete_empty_tracks_action():
+#     menu_action = hiero.ui.findMenuAction("Sandwich Dailies")
+#     if not menu_action:
+#         print("Sandwich Dailies menu not found.")
+#         return
 
-    sandwich_menu = menu_action.menu()
-    action = QAction("Delete Empty Tracks", sandwich_menu)
-    action.triggered.connect(delete_empty_tracks)
-    sandwich_menu.addAction(action)
+#     sandwich_menu = menu_action.menu()
+#     action = QAction("Delete Empty Tracks", sandwich_menu)
+#     action.triggered.connect(delete_empty_tracks)
+#     sandwich_menu.addAction(action)
 
-add_delete_empty_tracks_action()
+# add_delete_empty_tracks_action()
